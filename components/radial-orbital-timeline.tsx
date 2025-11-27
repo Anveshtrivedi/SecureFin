@@ -91,10 +91,10 @@ export default function RadialOrbitalTimeline({ timelineData, className }: Radia
       {/* Background Orbits */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         {/* Main Orbit Path */}
-        <div className="w-[85%] h-[85%] rounded-full border border-white/10" />
+        <div className="w-[85%] h-[85%] rounded-full border border-border" />
 
         {/* Subtle inner/outer glows */}
-        <div className="absolute w-[120%] h-[120%] bg-cyan-500/5 rounded-full blur-3xl opacity-50" />
+        <div className="absolute w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl opacity-50" />
       </div>
 
       {/* Center Core / Data Display */}
@@ -106,19 +106,19 @@ export default function RadialOrbitalTimeline({ timelineData, className }: Radia
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             exit={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
             transition={{ duration: 0.4 }}
-            className="absolute inset-0 flex flex-col items-center justify-center p-6 rounded-full bg-slate-950/50 backdrop-blur-xl border border-white/10 shadow-2xl"
+            className="absolute inset-0 flex flex-col items-center justify-center p-6 rounded-full bg-background/50 backdrop-blur-xl border border-border shadow-2xl"
           >
-            <div className="mb-3 p-3 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-              <activeNode.icon className="w-6 h-6 text-cyan-400" />
+            <div className="mb-3 p-3 rounded-full bg-primary/10 border border-primary/30 shadow-[0_0_15px_hsl(var(--primary)/0.3)]">
+              <activeNode.icon className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-1">{activeNode.title}</h3>
-            <p className="text-[10px] text-cyan-400/80 mb-2 font-mono uppercase tracking-wider">{activeNode.category}</p>
-            <p className="text-xs text-slate-300 leading-relaxed line-clamp-3 max-w-[90%]">{activeNode.content}</p>
+            <h3 className="text-lg font-bold text-foreground mb-1">{activeNode.title}</h3>
+            <p className="text-[10px] text-primary/80 mb-2 font-mono uppercase tracking-wider">{activeNode.category}</p>
+            <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3 max-w-[90%]">{activeNode.content}</p>
           </motion.div>
         </AnimatePresence>
 
         {/* Decorative background for the core */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full -z-10 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full -z-10 animate-pulse" />
       </div>
 
       {/* Orbital Nodes Container */}
@@ -148,8 +148,8 @@ export default function RadialOrbitalTimeline({ timelineData, className }: Radia
                 className={cn(
                   "relative w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border backdrop-blur-md transition-all duration-300 pointer-events-auto group",
                   i === activeIndex
-                    ? "bg-cyan-500/20 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.3)]"
-                    : "bg-slate-900/60 text-slate-400 border-white/10 hover:border-cyan-500/50 hover:bg-slate-800/80"
+                    ? "bg-primary/20 border-primary shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
+                    : "bg-muted/60 text-muted-foreground border-border hover:border-primary/50 hover:bg-muted/80"
                 )}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -158,7 +158,7 @@ export default function RadialOrbitalTimeline({ timelineData, className }: Radia
                 <CounterRotate rotation={rotation}>
                   <div className="flex flex-col items-center gap-3">
                     <node.icon className={cn("w-5 h-5 md:w-6 md:h-6 transition-colors",
-                      i === activeIndex ? "text-cyan-400" : "text-slate-400 group-hover:text-cyan-400"
+                      i === activeIndex ? "text-primary" : "text-muted-foreground group-hover:text-primary"
                     )} />
                   </div>
                 </CounterRotate>
@@ -170,8 +170,8 @@ export default function RadialOrbitalTimeline({ timelineData, className }: Radia
                   <span className={cn(
                     "text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 rounded-full backdrop-blur-sm transition-colors",
                     i === activeIndex
-                      ? "text-cyan-400 bg-cyan-950/30 border border-cyan-500/20"
-                      : "text-slate-500 group-hover:text-slate-300"
+                      ? "text-primary bg-primary/10 border border-primary/20"
+                      : "text-muted-foreground group-hover:text-foreground"
                   )}>
                     {node.title}
                   </span>

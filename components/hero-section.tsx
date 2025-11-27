@@ -109,25 +109,25 @@ const HeroSection = () => {
 
   const ThemeToggleButton = () => {
     if (!mounted) return <div className="w-10 h-10" />;
-    return (
-      <button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="bg-muted hover:bg-border flex-shrink-0 p-2.5 rounded-full transition-colors"
-        aria-label="Toggle theme"
-      >
-        {theme === "light" ? <Moon className="h-5 w-5 text-foreground" /> : <Sun className="h-5 w-5 text-foreground" />}
-      </button>
-    );
+    // return (
+    //   <button
+    //     onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    //     className="bg-muted hover:bg-border flex-shrink-0 p-2.5 rounded-full transition-colors"
+    //     aria-label="Toggle theme"
+    //   >
+    //     {theme === "light" ? <Moon className="h-5 w-5 text-foreground" /> : <Sun className="h-5 w-5 text-foreground" />}
+    //   </button>
+    // );
   };
 
   return (
     <DotGlobeHero>
-      <div className="w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8 h-full flex flex-col">
+      <div className="w-full max-w-8xl mx-auto p-4 sm:p-6 lg:p-8 h-full flex flex-col">
         {/* --- Navbar --- */}
         <div className="py-2 relative z-20 flex items-center justify-between gap-4">
           <div className="flex items-center gap-6">
             <a href="#" className="font-bold text-2xl pb-1 text-foreground cursor-pointer flex-shrink-0">
-              VittRaksha
+              Vitt Raksha
             </a>
             <nav className="hidden lg:flex text-muted-foreground font-medium">
               <ul className="flex items-center space-x-2">
@@ -143,10 +143,10 @@ const HeroSection = () => {
                     </ul>
                   )}
                 </li>
-                <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">Blog</a></li>
+                <li><a href="#" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">Dashboard</a></li>
                 <li className="relative">
                   <button onClick={() => toggleDropdown('desktop-pricing')} className="flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">
-                    Solutions<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-pricing' ? 'rotate-180' : ''}`} />
+                    RealtimeGuard<ChevronDown className={`h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-pricing' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'desktop-pricing' && (
                     <ul className="absolute top-full left-0 mt-2 p-2 bg-card border border-border shadow-lg rounded-xl z-20 w-48">
@@ -187,22 +187,22 @@ const HeroSection = () => {
         </div>
 
         {/* --- Hero Content --- */}
-        <div className="flex-1 flex flex-col items-center justify-center text-center -mt-20">
-          <div className="max-w-3xl mx-auto backdrop-blur-sm bg-background/5 p-8 rounded-3xl border border-white/10 shadow-2xl">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl text-foreground font-bold tracking-tight">
-              Innovation Meets <span className="text-primary">Simplicity</span>
+        <div className="flex-1 flex flex-col items-center justify-center text-center -mt-10">
+          <div className="max-w-4xl mx-auto backdrop-blur-sm bg-background/5 p-8 rounded-3xl border border-gray-100/10 shadow-5xl">
+            <h1 className="text-1xl sm:text-6xl md:text-6xl text-foreground font-bold tracking-tight">
+              Empowering You to Transact <span className="text-primary">Fearlessly.</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Discover cutting-edge solutions designed for the modern digital landscape. Secure, scalable, and built for the future of finance.
             </p>
             <div className="mt-8 flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-              <div className="relative">
+              {/* <div className="relative">
                 <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
                 <input type="email" placeholder="enter@email.com" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full max-w-xs bg-muted border-border text-foreground placeholder-muted-foreground font-medium pl-10 pr-4 py-2 text-sm sm:pl-11 sm:py-3 sm:text-base rounded-full focus:outline-none focus:ring-2 focus:ring-ring" />
-              </div>
-              <button onClick={handleEmailSubmit} className="bg-foreground hover:bg-muted-foreground text-background px-5 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full normal-case font-medium transition-colors flex items-center gap-2">
+              </div> */}
+              {/* <button onClick={handleEmailSubmit} className="bg-foreground hover:bg-muted-foreground text-background px-5 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full normal-case font-medium transition-colors flex items-center gap-2">
                 Join Now<ArrowRight className="h-4 w-4" />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

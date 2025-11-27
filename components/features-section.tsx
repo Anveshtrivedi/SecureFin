@@ -39,7 +39,7 @@ export function FeaturesSection() {
     },
     {
       id: 4,
-      title: "Real-time Analytics",
+      title: "Real-time Detection",
       date: "2024",
       content: "Monitor transactions and get insights with advanced reporting tools",
       category: "analytics",
@@ -73,13 +73,13 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section className="w-full py-20 px-4 bg-gradient-to-b from-slate-950 to-black">
+    <section className="w-full py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-400">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Powerful Features for Modern Finance
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Click on any node to explore our interconnected fintech features
           </p>
         </div>

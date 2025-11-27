@@ -31,12 +31,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$t
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-themes/dist/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/mail.js [app-client] (ecmascript) <export default as Mail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/arrow-right.js [app-client] (ecmascript) <export default as ArrowRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/menu.js [app-client] (ecmascript) <export default as Menu>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-client] (ecmascript) <export default as ChevronDown>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sun.js [app-client] (ecmascript) <export default as Sun>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/moon.js [app-client] (ecmascript) <export default as Moon>");
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 "use client";
@@ -213,32 +210,19 @@ const HeroSection = ()=>{
             lineNumber: 111,
             columnNumber: 26
         }, ("TURBOPACK compile-time value", void 0));
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            onClick: ()=>setTheme(theme === "dark" ? "light" : "dark"),
-            className: "bg-muted hover:bg-border flex-shrink-0 p-2.5 rounded-full transition-colors",
-            "aria-label": "Toggle theme",
-            children: theme === "light" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                className: "h-5 w-5 text-foreground"
-            }, void 0, false, {
-                fileName: "[project]/components/hero-section.tsx",
-                lineNumber: 118,
-                columnNumber: 30
-            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                className: "h-5 w-5 text-foreground"
-            }, void 0, false, {
-                fileName: "[project]/components/hero-section.tsx",
-                lineNumber: 118,
-                columnNumber: 77
-            }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/components/hero-section.tsx",
-            lineNumber: 113,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0));
+    // return (
+    //   <button
+    //     onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    //     className="bg-muted hover:bg-border flex-shrink-0 p-2.5 rounded-full transition-colors"
+    //     aria-label="Toggle theme"
+    //   >
+    //     {theme === "light" ? <Moon className="h-5 w-5 text-foreground" /> : <Sun className="h-5 w-5 text-foreground" />}
+    //   </button>
+    // );
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DotGlobeHero, {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8 h-full flex flex-col",
+            className: "w-full max-w-8xl mx-auto p-4 sm:p-6 lg:p-8 h-full flex flex-col",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "py-2 relative z-20 flex items-center justify-between gap-4",
@@ -249,7 +233,7 @@ const HeroSection = ()=>{
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#",
                                     className: "font-bold text-2xl pb-1 text-foreground cursor-pointer flex-shrink-0",
-                                    children: "VittRaksha"
+                                    children: "Vitt Raksha"
                                 }, void 0, false, {
                                     fileName: "[project]/components/hero-section.tsx",
                                     lineNumber: 129,
@@ -345,7 +329,7 @@ const HeroSection = ()=>{
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "#",
                                                     className: "hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg",
-                                                    children: "Blog"
+                                                    children: "Dashboard"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/hero-section.tsx",
                                                     lineNumber: 146,
@@ -363,13 +347,13 @@ const HeroSection = ()=>{
                                                         onClick: ()=>toggleDropdown('desktop-pricing'),
                                                         className: "flex items-center hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg",
                                                         children: [
-                                                            "Solutions",
+                                                            "RealtimeGuard",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                                 className: `h-4 w-4 ml-1 transition-transform ${openDropdown === 'desktop-pricing' ? 'rotate-180' : ''}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/hero-section.tsx",
                                                                 lineNumber: 149,
-                                                                columnNumber: 30
+                                                                columnNumber: 34
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
@@ -578,21 +562,21 @@ const HeroSection = ()=>{
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex-1 flex flex-col items-center justify-center text-center -mt-20",
+                    className: "flex-1 flex flex-col items-center justify-center text-center -mt-10",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "max-w-3xl mx-auto backdrop-blur-sm bg-background/5 p-8 rounded-3xl border border-white/10 shadow-2xl",
+                        className: "max-w-4xl mx-auto backdrop-blur-sm bg-background/5 p-8 rounded-3xl border border-gray-100/10 shadow-5xl",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-4xl sm:text-6xl md:text-7xl text-foreground font-bold tracking-tight",
+                                className: "text-1xl sm:text-6xl md:text-6xl text-foreground font-bold tracking-tight",
                                 children: [
-                                    "Innovation Meets ",
+                                    "Empowering You to Transact ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-primary",
-                                        children: "Simplicity"
+                                        children: "Fearlessly."
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero-section.tsx",
                                         lineNumber: 193,
-                                        columnNumber: 32
+                                        columnNumber: 42
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
@@ -609,55 +593,8 @@ const HeroSection = ()=>{
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-8 flex items-center justify-center gap-3 sm:gap-4 flex-wrap",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "relative",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
-                                                className: "absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/hero-section.tsx",
-                                                lineNumber: 200,
-                                                columnNumber: 17
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "email",
-                                                placeholder: "enter@email.com",
-                                                value: email,
-                                                onChange: (e)=>setEmail(e.target.value),
-                                                className: "w-full max-w-xs bg-muted border-border text-foreground placeholder-muted-foreground font-medium pl-10 pr-4 py-2 text-sm sm:pl-11 sm:py-3 sm:text-base rounded-full focus:outline-none focus:ring-2 focus:ring-ring"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/hero-section.tsx",
-                                                lineNumber: 201,
-                                                columnNumber: 17
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/hero-section.tsx",
-                                        lineNumber: 199,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: handleEmailSubmit,
-                                        className: "bg-foreground hover:bg-muted-foreground text-background px-5 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded-full normal-case font-medium transition-colors flex items-center gap-2",
-                                        children: [
-                                            "Join Now",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                className: "h-4 w-4"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/hero-section.tsx",
-                                                lineNumber: 204,
-                                                columnNumber: 25
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/hero-section.tsx",
-                                        lineNumber: 203,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
+                                className: "mt-8 flex items-center justify-center gap-3 sm:gap-4 flex-wrap"
+                            }, void 0, false, {
                                 fileName: "[project]/components/hero-section.tsx",
                                 lineNumber: 198,
                                 columnNumber: 13
@@ -802,14 +739,14 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                 className: "absolute inset-0 flex items-center justify-center pointer-events-none",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-[85%] h-[85%] rounded-full border border-white/10"
+                        className: "w-[85%] h-[85%] rounded-full border border-border"
                     }, void 0, false, {
                         fileName: "[project]/components/radial-orbital-timeline.tsx",
                         lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute w-[120%] h-[120%] bg-cyan-500/5 rounded-full blur-3xl opacity-50"
+                        className: "absolute w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl opacity-50"
                     }, void 0, false, {
                         fileName: "[project]/components/radial-orbital-timeline.tsx",
                         lineNumber: 97,
@@ -845,12 +782,12 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                             transition: {
                                 duration: 0.4
                             },
-                            className: "absolute inset-0 flex flex-col items-center justify-center p-6 rounded-full bg-slate-950/50 backdrop-blur-xl border border-white/10 shadow-2xl",
+                            className: "absolute inset-0 flex flex-col items-center justify-center p-6 rounded-full bg-background/50 backdrop-blur-xl border border-border shadow-2xl",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mb-3 p-3 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]",
+                                    className: "mb-3 p-3 rounded-full bg-primary/10 border border-primary/30 shadow-[0_0_15px_hsl(var(--primary)/0.3)]",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(activeNode.icon, {
-                                        className: "w-6 h-6 text-cyan-400"
+                                        className: "w-6 h-6 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/components/radial-orbital-timeline.tsx",
                                         lineNumber: 112,
@@ -862,7 +799,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-lg font-bold text-white mb-1",
+                                    className: "text-lg font-bold text-foreground mb-1",
                                     children: activeNode.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/radial-orbital-timeline.tsx",
@@ -870,7 +807,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-[10px] text-cyan-400/80 mb-2 font-mono uppercase tracking-wider",
+                                    className: "text-[10px] text-primary/80 mb-2 font-mono uppercase tracking-wider",
                                     children: activeNode.category
                                 }, void 0, false, {
                                     fileName: "[project]/components/radial-orbital-timeline.tsx",
@@ -878,7 +815,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-xs text-slate-300 leading-relaxed line-clamp-3 max-w-[90%]",
+                                    className: "text-xs text-muted-foreground leading-relaxed line-clamp-3 max-w-[90%]",
                                     children: activeNode.content
                                 }, void 0, false, {
                                     fileName: "[project]/components/radial-orbital-timeline.tsx",
@@ -897,7 +834,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full -z-10 animate-pulse"
+                        className: "absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full -z-10 animate-pulse"
                     }, void 0, false, {
                         fileName: "[project]/components/radial-orbital-timeline.tsx",
                         lineNumber: 121,
@@ -930,7 +867,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
                                 onClick: ()=>handleNodeClick(i),
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border backdrop-blur-md transition-all duration-300 pointer-events-auto group", i === activeIndex ? "bg-cyan-500/20 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.3)]" : "bg-slate-900/60 text-slate-400 border-white/10 hover:border-cyan-500/50 hover:bg-slate-800/80"),
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border backdrop-blur-md transition-all duration-300 pointer-events-auto group", i === activeIndex ? "bg-primary/20 border-primary shadow-[0_0_20px_hsl(var(--primary)/0.3)]" : "bg-muted/60 text-muted-foreground border-border hover:border-primary/50 hover:bg-muted/80"),
                                 whileHover: {
                                     scale: 1.1
                                 },
@@ -942,7 +879,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex flex-col items-center gap-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(node.icon, {
-                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-5 h-5 md:w-6 md:h-6 transition-colors", i === activeIndex ? "text-cyan-400" : "text-slate-400 group-hover:text-cyan-400")
+                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-5 h-5 md:w-6 md:h-6 transition-colors", i === activeIndex ? "text-primary" : "text-muted-foreground group-hover:text-primary")
                                         }, void 0, false, {
                                             fileName: "[project]/components/radial-orbital-timeline.tsx",
                                             lineNumber: 160,
@@ -968,7 +905,7 @@ function RadialOrbitalTimeline({ timelineData, className }) {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CounterRotate, {
                                     rotation: rotation,
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 rounded-full backdrop-blur-sm transition-colors", i === activeIndex ? "text-cyan-400 bg-cyan-950/30 border border-cyan-500/20" : "text-slate-500 group-hover:text-slate-300"),
+                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 rounded-full backdrop-blur-sm transition-colors", i === activeIndex ? "text-primary bg-primary/10 border border-primary/20" : "text-muted-foreground group-hover:text-foreground"),
                                         children: node.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/radial-orbital-timeline.tsx",
@@ -1106,7 +1043,7 @@ function FeaturesSection() {
         },
         {
             id: 4,
-            title: "Real-time Analytics",
+            title: "Real-time Detection",
             date: "2024",
             content: "Monitor transactions and get insights with advanced reporting tools",
             category: "analytics",
@@ -1146,7 +1083,7 @@ function FeaturesSection() {
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "w-full py-20 px-4 bg-gradient-to-b from-slate-950 to-black",
+        className: "w-full py-20 px-4 bg-background",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto",
             children: [
@@ -1154,7 +1091,7 @@ function FeaturesSection() {
                     className: "text-center mb-12",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl md:text-5xl font-bold mb-4 text-slate-400",
+                            className: "text-4xl md:text-5xl font-bold mb-4 text-foreground",
                             children: "Powerful Features for Modern Finance"
                         }, void 0, false, {
                             fileName: "[project]/components/features-section.tsx",
@@ -1162,7 +1099,7 @@ function FeaturesSection() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-lg text-slate-400 max-w-2xl mx-auto",
+                            className: "text-lg text-muted-foreground max-w-2xl mx-auto",
                             children: "Click on any node to explore our interconnected fintech features"
                         }, void 0, false, {
                             fileName: "[project]/components/features-section.tsx",
