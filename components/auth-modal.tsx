@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { X, Mail, Lock, Smartphone, ArrowRight } from "lucide-react"
+import { X, Mail, Lock, Smartphone, ArrowRight, User, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/components/auth-context"
 
@@ -11,12 +11,14 @@ interface AuthModalProps {
 }
 
 type AuthMode = "login" | "signup" | "otp"
+type UserRole = "user" | "admin"
 
 export function AuthModal({ isOpen, onClose }: AuthModalProps) {
     const [mode, setMode] = React.useState<AuthMode>("login")
     const { login } = useAuth()
     const [email, setEmail] = React.useState("")
     const [password, setPassword] = React.useState("")
+    const [role, setRole] = React.useState<UserRole>("user")
 
     if (!isOpen) return null
 
@@ -24,7 +26,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         e.preventDefault()
         // Simulate API call
         setTimeout(() => {
-            login()
+            login(role)
             onClose()
         }, 500)
     }
@@ -57,6 +59,28 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 {/* Form */}
                 <div className="p-8">
                     <form onSubmit={handleLogin} className="space-y-4">
+                        {/* Role Selection */}
+                        {mode === "login" && (
+                            <div className="flex p-1 bg-slate-900 rounded-xl mb-6">
+                                <button
+                                    type="button"
+                                    onClick={() => setRole("user")}
+                                    className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium transition-all ${role === "user" ? "bg-cyan-500 text-black shadow-lg" : "text-slate-400 hover:text-white"}`}
+                                >
+                                    <User className="h-4 w-4" />
+                                    User
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setRole("admin")}
+                                    className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium transition-all ${role === "admin" ? "bg-cyan-500 text-black shadow-lg" : "text-slate-400 hover:text-white"}`}
+                                >
+                                    <ShieldCheck className="h-4 w-4" />
+                                    Admin
+                                </button>
+                            </div>
+                        )}
+
                         {mode !== "otp" && (
                             <div className="space-y-2">
                                 <label className="text-xs font-medium text-slate-400 uppercase tracking-wider">Email</label>

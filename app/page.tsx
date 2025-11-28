@@ -7,6 +7,7 @@ export default function Home() {
       {/* Hero with 3D Globe */}
       <HeroSection />
 
+
       {/* Features Section */}
       <FeaturesSection />
     </main>

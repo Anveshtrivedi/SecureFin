@@ -10,12 +10,20 @@ export function Navbar() {
 
     const routes = [
         {
+            href: "/",
+            label: "Home",
+        },
+        {
             href: "/dashboard",
             label: "Dashboard",
         },
         {
             href: "/realtime-guard",
             label: "RealtimeGuard",
+        },
+        {
+            href: "/about",
+            label: "About",
         },
     ]
 
@@ -24,21 +32,25 @@ export function Navbar() {
             <div className="container flex h-16 items-center px-4 md:px-6">
                 <Link href="/" className="flex items-center gap-2 mr-6">
                     <Shield className="h-6 w-6 text-cyan-500" />
-                    <span className="font-bold text-lg tracking-tight text-white">Vitt Raksha</span>
+                    <span className="font-bold text-lg tracking-tight text-white">
+                        {pathname === "/about" ? "About" : "Vitt Raksha"}
+                    </span>
                 </Link>
                 <nav className="flex items-center gap-6 ml-auto">
-                    {routes.map((route) => (
-                        <Link
-                            key={route.href}
-                            href={route.href}
-                            className={cn(
-                                "text-sm font-medium transition-colors hover:text-cyan-400",
-                                pathname === route.href ? "text-cyan-400" : "text-slate-400"
-                            )}
-                        >
-                            {route.label}
-                        </Link>
-                    ))}
+                    {routes
+                        .filter(route => pathname !== "/about" || route.href === "/")
+                        .map((route) => (
+                            <Link
+                                key={route.href}
+                                href={route.href}
+                                className={cn(
+                                    "text-sm font-medium transition-colors hover:text-cyan-400",
+                                    pathname === route.href ? "text-cyan-400" : "text-slate-400"
+                                )}
+                            >
+                                {route.label}
+                            </Link>
+                        ))}
                 </nav>
             </div>
         </header>

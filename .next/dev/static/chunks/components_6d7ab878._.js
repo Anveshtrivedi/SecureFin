@@ -49,40 +49,50 @@ const AuthContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project
 function AuthProvider({ children }) {
     _s();
     const [isLoggedIn, setIsLoggedIn] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [role, setRole] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    // Persist auth state (optional, for demo purposes)
+    // Persist auth state
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AuthProvider.useEffect": ()=>{
             const storedAuth = localStorage.getItem("isLoggedIn");
+            const storedRole = localStorage.getItem("userRole");
             if (storedAuth === "true") {
                 setIsLoggedIn(true);
+                setRole(storedRole);
             }
         }
     }["AuthProvider.useEffect"], []);
-    const login = ()=>{
+    const login = (selectedRole)=>{
         setIsLoggedIn(true);
+        setRole(selectedRole);
         localStorage.setItem("isLoggedIn", "true");
+        if (selectedRole) {
+            localStorage.setItem("userRole", selectedRole);
+        }
         router.push("/dashboard");
     };
     const logout = ()=>{
         setIsLoggedIn(false);
+        setRole(null);
         localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userRole");
         router.push("/");
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AuthContext.Provider, {
         value: {
             isLoggedIn,
+            role,
             login,
             logout
         },
         children: children
     }, void 0, false, {
         fileName: "[project]/components/auth-context.tsx",
-        lineNumber: 39,
+        lineNumber: 51,
         columnNumber: 9
     }, this);
 }
-_s(AuthProvider, "DWNEqjEkaOnjU+z1psbEa9n6Jmw=", false, function() {
+_s(AuthProvider, "BTxc7KkmLmY5+uRvBOkxQ5OBgsA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

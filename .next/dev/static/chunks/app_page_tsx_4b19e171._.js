@@ -10,7 +10,7 @@
   "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_56b6fd65._.js",
   "static/chunks/node_modules_motion-dom_dist_es_ad20fb50._.js",
   "static/chunks/node_modules_framer-motion_dist_es_6fe2fe90._.js",
-  "static/chunks/node_modules_6d0a07ad._.js"
+  "static/chunks/node_modules_411a2cd7._.js"
 ],
     source: "dynamic"
 });

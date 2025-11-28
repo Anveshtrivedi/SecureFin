@@ -2,7 +2,8 @@
 
 import { useAuth } from "@/components/auth-context"
 import { Button } from "@/components/ui/button"
-import { Shield, LogOut, TrendingUp, AlertCircle, Wallet, Radar as RadarIcon } from "lucide-react"
+import { Shield, LogOut, TrendingUp, AlertCircle, Wallet, Radar as RadarIcon, Home } from "lucide-react"
+import Link from "next/link"
 import { Bar, BarChart, CartesianGrid, XAxis, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from "recharts"
 import {
     ChartConfig,
@@ -43,15 +44,91 @@ const categoryConfig = {
 } satisfies ChartConfig
 
 export default function DashboardPage() {
-    const { logout } = useAuth()
+    const { logout, role } = useAuth()
+
+    if (role === "admin") {
+        return (
+            <div className="min-h-screen bg-background text-foreground flex flex-col">
+                <header className="border-b border-border bg-card/50 backdrop-blur-xl sticky top-0 z-50">
+                    <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+                        <div className="flex items-center gap-4">
+                            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                                <Shield className="h-6 w-6 text-purple-500" />
+                                <span className="font-bold text-lg tracking-tight">SecureFin Admin</span>
+                            </Link>
+                            <Button variant="ghost" size="sm" asChild className="gap-2">
+                                <Link href="/">
+                                    <Home className="h-4 w-4" />
+                                    Home
+                                </Link>
+                            </Button>
+                        </div>
+                        <Button variant="ghost" onClick={logout} className="gap-2 hover:bg-red-500/10 hover:text-red-500 transition-colors">
+                            <LogOut className="h-4 w-4" />
+                            Logout
+                        </Button>
+                    </div>
+                </header>
+                <main className="flex-1 container px-4 md:px-6 py-12">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center justify-between">
+                            <h1 className="text-3xl font-bold tracking-tight">Admin Overview</h1>
+                            <div className="flex gap-2">
+                                <Button variant="outline">Manage Users</Button>
+                                <Button>System Settings</Button>
+                            </div>
+                        </div>
+
+                        <div className="grid gap-6 md:grid-cols-3">
+                            <div className="bg-card border border-border p-6 rounded-2xl shadow-sm">
+                                <h3 className="text-sm font-medium text-muted-foreground mb-2">Total Users</h3>
+                                <p className="text-3xl font-bold">12,345</p>
+                                <div className="text-xs text-green-500 mt-2 flex items-center gap-1">
+                                    <TrendingUp className="h-3 w-3" /> +12% from last month
+                                </div>
+                            </div>
+                            <div className="bg-card border border-border p-6 rounded-2xl shadow-sm">
+                                <h3 className="text-sm font-medium text-muted-foreground mb-2">Active Sessions</h3>
+                                <p className="text-3xl font-bold">1,203</p>
+                                <div className="text-xs text-green-500 mt-2 flex items-center gap-1">
+                                    <TrendingUp className="h-3 w-3" /> +5% from last hour
+                                </div>
+                            </div>
+                            <div className="bg-card border border-border p-6 rounded-2xl shadow-sm">
+                                <h3 className="text-sm font-medium text-muted-foreground mb-2">System Health</h3>
+                                <p className="text-3xl font-bold text-green-500">99.9%</p>
+                                <div className="text-xs text-muted-foreground mt-2">All systems operational</div>
+                            </div>
+                        </div>
+
+                        <div className="bg-card border border-border rounded-2xl p-8 text-center py-20">
+                            <Shield className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
+                            <h3 className="text-lg font-medium">Admin Panel Content</h3>
+                            <p className="text-muted-foreground max-w-md mx-auto mt-2">
+                                This is a placeholder for the admin dashboard. You can add user management, analytics, and system configuration tools here.
+                            </p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        )
+    }
 
     return (
         <div className="min-h-screen bg-background text-foreground flex flex-col">
             <header className="border-b border-border bg-card/50 backdrop-blur-xl sticky top-0 z-50">
                 <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-                    <div className="flex items-center gap-2">
-                        <Shield className="h-6 w-6 text-cyan-500" />
-                        <span className="font-bold text-lg tracking-tight">SecureFin Dashboard</span>
+                    <div className="flex items-center gap-4">
+                        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                            <Shield className="h-6 w-6 text-cyan-500" />
+                            <span className="font-bold text-lg tracking-tight">SecureFin Dashboard</span>
+                        </Link>
+                        <Button variant="ghost" size="sm" asChild className="gap-2">
+                            <Link href="/">
+                                <Home className="h-4 w-4" />
+                                Home
+                            </Link>
+                        </Button>
                     </div>
                     <Button variant="ghost" onClick={logout} className="gap-2 hover:bg-red-500/10 hover:text-red-500 transition-colors">
                         <LogOut className="h-4 w-4" />
@@ -150,7 +227,7 @@ export default function DashboardPage() {
                                 ].map((expense, i) => (
                                     <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-background/50 border border-border/50 hover:border-border transition-colors">
                                         <div className="flex items-center gap-3">
-                                            <div className={`w-2 h-2 rounded-full ₹{expense.paid ? "bg-green-500" : "bg-orange-500"}`} />
+                                            <div className={`w-2 h-2 rounded-full ${expense.paid ? "bg-green-500" : "bg-orange-500"}`} />
                                             <div>
                                                 <p className="font-medium text-sm">{expense.name}</p>
                                                 <p className="text-xs text-muted-foreground">Due: {expense.due}</p>
