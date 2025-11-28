@@ -1,54 +1,97 @@
-import { Smartphone, Coins } from "lucide-react"
+"use client";
 
-export interface Transaction {
-    id: number | string;
-    type: string;
+import { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { History, ArrowUpRight, ArrowDownLeft } from "lucide-react";
+import { getShortAddress } from "@/src/blockchain/wallet";
+
+interface Transaction {
+    txHash: string;
+    from: string;
+    to: string;
     amount: string;
-    date: string;
+    timestamp: string;
     status: string;
-    icon?: any; // Using any for simplicity with Lucide icons passed as components or just mapping them
-    mode: "crypto" | "upi";
-    hash?: string;
 }
 
 interface TransactionHistoryProps {
-    transactions: Transaction[];
+    address: string | null;
+    refreshTrigger: number;
 }
 
-export function TransactionHistory({ transactions }: TransactionHistoryProps) {
-    return (
-        <div className="bg-slate-950/50 backdrop-blur-xl border border-white/10 rounded-2xl p-6 animate-fade-in" style={{ animationDelay: "300ms" }}>
-            <h2 className="text-xl font-semibold text-white mb-6">Recent Transactions</h2>
+export function TransactionHistory({ address, refreshTrigger }: TransactionHistoryProps) {
+    const [transactions, setTransactions] = useState<Transaction[]>([]);
+    const [loading, setLoading] = useState(false);
 
-            <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
-                {transactions.length === 0 ? (
-                    <p className="text-slate-500 text-center py-4">No transactions yet.</p>
-                ) : (
-                    transactions.map((tx) => (
-                        <div key={tx.id} className="flex items-center justify-between p-4 rounded-xl bg-slate-900/30 border border-white/5 hover:border-[#00C2A8]/30 transition-colors group">
-                            <div className="flex items-center gap-4">
-                                <div className={`p-3 rounded-full ${tx.mode === 'crypto' ? 'bg-[#00C2A8]/10 text-[#00C2A8]' : 'bg-blue-500/10 text-blue-500'
-                                    }`}>
-                                    {tx.mode === 'crypto' ? <Coins className="h-5 w-5" /> : <Smartphone className="h-5 w-5" />}
+    useEffect(() => {
+        if (address) {
+            fetchHistory();
+        }
+    }, [address, refreshTrigger]);
+
+    async function fetchHistory() {
+        setLoading(true);
+        try {
+            const res = await fetch(`/api/history?address=${address}`);
+            const data = await res.json();
+            if (data.transactions) {
+                setTransactions(data.transactions);
+            }
+        } catch (error) {
+            console.error("Failed to fetch history:", error);
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    if (!address) return null;
+
+    return (
+        <Card className="bg-black/40 border-[#00C2A8]/20 backdrop-blur-sm h-full">
+            <CardHeader>
+                <CardTitle className="text-white flex items-center gap-2">
+                    <History className="h-5 w-5 text-[#00C2A8]" />
+                    Transaction History
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                    {loading ? (
+                        <p className="text-slate-400 text-center py-4">Loading history...</p>
+                    ) : transactions.length === 0 ? (
+                        <p className="text-slate-400 text-center py-4">No transactions found</p>
+                    ) : (
+                        transactions.map((tx) => {
+                            const isIncoming = tx.to.toLowerCase() === address.toLowerCase();
+                            return (
+                                <div key={tx.txHash} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10 hover:border-[#00C2A8]/30 transition-colors">
+                                    <div className="flex items-center gap-3">
+                                        <div className={`p-2 rounded-full ${isIncoming ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+                                            {isIncoming ? <ArrowDownLeft className="h-4 w-4" /> : <ArrowUpRight className="h-4 w-4" />}
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-medium text-white">
+                                                {isIncoming ? 'Received from' : 'Sent to'} {isIncoming ? getShortAddress(tx.from) : getShortAddress(tx.to)}
+                                            </p>
+                                            <p className="text-xs text-slate-400">
+                                                {new Date(tx.timestamp).toLocaleString()}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className={`text-sm font-bold ${isIncoming ? 'text-green-400' : 'text-white'}`}>
+                                            {isIncoming ? '+' : '-'}{tx.amount} SFT
+                                        </p>
+                                        <p className="text-xs text-[#00C2A8]">
+                                            {tx.status}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="font-medium text-white">{tx.type}</p>
-                                    <p className="text-xs text-slate-500">{tx.date}</p>
-                                </div>
-                            </div>
-                            <div className="text-right">
-                                <p className={`font-bold ${tx.amount.startsWith('+') ? 'text-green-500' : 'text-white'
-                                    }`}>
-                                    {tx.amount}
-                                </p>
-                                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-500/10 text-green-500 mt-1">
-                                    {tx.status}
-                                </span>
-                            </div>
-                        </div>
-                    ))
-                )}
-            </div>
-        </div>
-    )
+                            );
+                        })
+                    )}
+                </div>
+            </CardContent>
+        </Card>
+    );
 }

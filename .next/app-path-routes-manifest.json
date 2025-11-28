@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/history/route": "/api/history",
+  "/api/mock-upi/route": "/api/mock-upi",
+  "/api/transfer/route": "/api/transfer",
+  "/dashboard/page": "/dashboard",
+  "/financial-literacy/page": "/financial-literacy",
+  "/page": "/",
+  "/realtime-guard/page": "/realtime-guard",
+  "/wallet/page": "/wallet"
+}
