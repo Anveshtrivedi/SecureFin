@@ -74,6 +74,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/optibudget/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/optibudget">> = Specific
+  const handler = {} as typeof import("../../../app/optibudget/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
@@ -92,10 +101,37 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/vitta-raksha/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/vitta-raksha">> = Specific
+  const handler = {} as typeof import("../../../app/vitta-raksha/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/wallet/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/wallet">> = Specific
   const handler = {} as typeof import("../../../app/wallet/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/api/chat/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/chat">> = Specific
+  const handler = {} as typeof import("../../../app/api/chat/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/api/db-test/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/db-test">> = Specific
+  const handler = {} as typeof import("../../../app/api/db-test/route.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

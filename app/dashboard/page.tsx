@@ -1,5 +1,6 @@
 "use client"
 
+import { Navbar } from "@/components/navbar"
 import { useAuth } from "@/components/auth-context"
 import { Button } from "@/components/ui/button"
 import { Shield, LogOut, TrendingUp, AlertCircle, Wallet, Radar as RadarIcon, Home, Plus, Trash2 } from "lucide-react"
@@ -111,27 +112,8 @@ export default function DashboardPage() {
     if (role === "admin") {
         return (
             <div className="min-h-screen bg-background text-foreground flex flex-col">
-                <header className="border-b border-border bg-card/50 backdrop-blur-xl sticky top-0 z-50">
-                    <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-                        <div className="flex items-center gap-4">
-                            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                                <Shield className="h-6 w-6 text-purple-500" />
-                                <span className="font-bold text-lg tracking-tight">SecureFin Admin</span>
-                            </Link>
-                            <Button variant="ghost" size="sm" asChild className="gap-2">
-                                <Link href="/">
-                                    <Home className="h-4 w-4" />
-                                    Home
-                                </Link>
-                            </Button>
-                        </div>
-                        <Button variant="ghost" onClick={logout} className="gap-2 hover:bg-red-500/10 hover:text-red-500 transition-colors">
-                            <LogOut className="h-4 w-4" />
-                            Logout
-                        </Button>
-                    </div>
-                </header>
-                <main className="flex-1 container px-4 md:px-6 py-12">
+                <Navbar />
+                <main className="flex-1 container px-4 md:px-6 py-12 pt-24">
                     <div className="max-w-4xl mx-auto space-y-8">
                         <div className="flex items-center justify-between">
                             <h1 className="text-3xl font-bold tracking-tight">Admin Overview</h1>
@@ -178,28 +160,9 @@ export default function DashboardPage() {
 
     return (
         <div className="min-h-screen bg-background text-foreground flex flex-col">
-            <header className="border-b border-border bg-card/50 backdrop-blur-xl sticky top-0 z-50">
-                <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-                    <div className="flex items-center gap-4">
-                        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                            <Shield className="h-6 w-6 text-cyan-500" />
-                            <span className="font-bold text-lg tracking-tight">SecureFin Dashboard</span>
-                        </Link>
-                        <Button variant="ghost" size="sm" asChild className="gap-2">
-                            <Link href="/">
-                                <Home className="h-4 w-4" />
-                                Home
-                            </Link>
-                        </Button>
-                    </div>
-                    <Button variant="ghost" onClick={logout} className="gap-2 hover:bg-red-500/10 hover:text-red-500 transition-colors">
-                        <LogOut className="h-4 w-4" />
-                        Logout
-                    </Button>
-                </div>
-            </header>
+            <Navbar />
 
-            <main className="flex-1 container px-4 md:px-6 py-8 space-y-8">
+            <main className="flex-1 container px-4 md:px-6 py-8 pt-24 space-y-8">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
                         <h1 className="text-3xl font-bold tracking-tight">Financial Overview</h1>

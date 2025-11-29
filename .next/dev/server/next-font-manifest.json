@@ -3,13 +3,19 @@
     "[project]/app/_not-found/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
     ],
+    "[project]/app/about/page": [
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
+    ],
     "[project]/app/dashboard/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
     ],
-    "[project]/app/financial-literacy/page": [
+    "[project]/app/optibudget/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
     ],
     "[project]/app/page": [
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
+    ],
+    "[project]/app/vitta-raksha/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
     ],
     "[project]/app/wallet/page": [

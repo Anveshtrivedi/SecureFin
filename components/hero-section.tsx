@@ -124,7 +124,10 @@ const HeroSection = () => {
                   <>
                     <li><Link href="/dashboard" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">Dashboard</Link></li>
                     {role !== 'admin' && (
-                      <li><Link href="/financial-literacy" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">Vitt Raksha</Link></li>
+                      <>
+                        <li><Link href="/vitta-raksha" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">Vitt Raksha</Link></li>
+                        <li><Link href="/optibudget" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">OptiBudget</Link></li>
+                      </>
                     )}
                     {role === 'admin' && (
                       <li><Link href="/realtime-guard" className="hover:text-foreground px-3 py-2 text-sm transition-colors rounded-lg">RealtimeGuard</Link></li>
@@ -167,7 +170,10 @@ const HeroSection = () => {
                     <>
                       <li><Link href="/dashboard" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">Dashboard</Link></li>
                       {role !== 'admin' && (
-                        <li><Link href="/financial-literacy" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">Vitt Raksha</Link></li>
+                        <>
+                          <li><Link href="/vitta-raksha" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">Vitt Raksha</Link></li>
+                          <li><Link href="/optibudget" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">OptiBudget</Link></li>
+                        </>
                       )}
                       {role === 'admin' && (
                         <li><Link href="/realtime-guard" className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-lg">RealtimeGuard</Link></li>
