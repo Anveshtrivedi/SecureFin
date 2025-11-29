@@ -130,7 +130,7 @@ User Income (₹50,000)
 
 **Frontend** → Next.js 14 + React + Tailwind CSS + Shadcn UI  
 **Backend** → Next.js API Routes (Serverless)  
-**Blockchain** → Polygon Amoy + Ethers.js v6  
+**Blockchain** → Ganache CLI + Ethers.js v6  
 **AI Engine** → Google Gemini 2.5 Flash  
 **Database** → NeonDB (Serverless PostgreSQL)  
 **Auth** → Custom Context (Clerk/NextAuth Ready)
